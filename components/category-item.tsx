@@ -17,6 +17,10 @@ export default function CategoryItem({ data } : props) {
         style={styles.image} 
         resizeMode="cover"
       />
+      <View style={styles.bg}></View>
+      <View style={styles.bgContent}>
+        <Text style={styles.bgContent}>{data.title}</Text>
+      </View>
     </Pressable>
   );
 }
@@ -27,7 +31,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginBottom: 16,
     backgroundColor: "#fff",
-    borderRadius: 24,
+    borderRadius: 18,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -38,6 +42,24 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 150,
-    borderRadius: 24,
+    borderRadius: 18,
   },
+  bg: {
+    position: "absolute",
+    width: "100%",
+    height: 150,
+    backgroundColor: "rgba(0,0,0,0.3)",
+    borderRadius: 18,
+  },
+  bgContent: {
+    height: 150,
+    marginTop: -150,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  title:{
+    color: "#fff",
+    fontSize: 24,
+    fontWeight: "bold",
+  }
 });
