@@ -3,6 +3,7 @@
     "name": "rn-ingrid-store",
     "slug": "rn-ingrid-store",
     "version": "1.0.0",
+    "scheme": "mrn-ingrid-store",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,6 +24,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
