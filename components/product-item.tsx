@@ -15,9 +15,10 @@ export default function ProductItem({ data } : props) {
           source={{ uri: data.image }}
           resizeMode="cover"
         />
-        <View>
+        <View style={styles.info}>
           <Text>{data.title}</Text>
-          <Text>{data.price}</Text>
+          <Text>{data.description}</Text>
+          <Text> Kr {data.price.toFixed(2)}</Text>
         </View>
       </Pressable>
     </Link>
@@ -28,10 +29,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "row",
+    marginBottom: 16,
   },
   image: {
     width: 100,
     height: 100,
     borderRadius: 24,
-  }
+    backgroundColor: "#ccc",
+  },
+  info: {
+    flex: 1,
+    marginLeft: 16,
+  },
 });
