@@ -1,6 +1,5 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Category } from "../types/category";
-import { Link } from "expo-router";
 
 type props = {
   data: Category;
@@ -8,20 +7,9 @@ type props = {
 
 export default function CategoryItem({ data } : props) {
   return (
-    <Link href={`/product/${data.id}`} asChild>
-      <Pressable style={styles.container} >
-        <Image 
-          style={styles.image} 
-          source={{ uri: data.image }}
-          resizeMode="cover"
-        />
-        <View style={styles.info}>
-          <Text style={styles.title}>{data.title}</Text>
-          <Text style={styles.description}>{data.description}</Text>
-          <Text style={styles.price}> Kr {data.price.toFixed(2)}</Text>
-        </View>
-      </Pressable>
-    </Link>
+    <Pressable style={styles.container} >
+      <Text>{data.title}</Text>
+    </Pressable>
   );
 }
 
