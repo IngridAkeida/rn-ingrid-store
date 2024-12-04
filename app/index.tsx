@@ -1,12 +1,18 @@
 import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { Button } from "../components/button";
 
 export default function Home() {
+
+  const handleStart = () => {
+    
+  }
   return (
     <SafeAreaView style={styles.container}>
       <Image source={require('../assets/sources/logo.png')} style={styles.logo} resizeMode="cover"/>
       <View>
         <Text style={styles.h1}> Ingrid's Store</Text>
         <Text style={styles.h2}> Here you can find everything you want!</Text>
+        <Button title="Let's Start!" onPress={handleStart}/>
       </View>
     </SafeAreaView>
   );
