@@ -1,10 +1,11 @@
 import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { Button } from "../components/button";
+import { router } from "expo-router";
 
-export default function Home() {
+export default function index() {
 
   const handleStart = () => {
-    
+    router.replace('/home');
   }
   return (
     <SafeAreaView style={styles.container}>
