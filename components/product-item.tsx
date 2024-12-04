@@ -1,9 +1,14 @@
 import { Text, View } from "react-native";
+import { Product } from "../types/product";
 
-export default function ProductsItem() {
+type props = {
+  data: Product;
+}
+
+export default function ProductItem({ data } : props) {
   return (
     <View>
-      <Text>Products</Text>
+      <Text>Product {data.title} - {data.price}</Text>
     </View>
   );
 }

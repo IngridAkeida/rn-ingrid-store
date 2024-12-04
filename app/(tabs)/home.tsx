@@ -1,5 +1,6 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import { getAllProducts } from '../../services/products';
+import ProductItem from '../../components/product-item';
 
 export default function Home() {
   const products = getAllProducts();
@@ -7,7 +8,7 @@ export default function Home() {
     <View style={styles.container}>
       <FlatList 
         data={products}
-        renderItem={({ item }) => <Text>{item.title}</Text>}
+        renderItem={({ item }) => <ProductItem data={item} />}
         keyExtractor={item => item.id.toString()}
         style={styles.list}
       />
