@@ -16,9 +16,9 @@ export default function ProductItem({ data } : props) {
           resizeMode="cover"
         />
         <View style={styles.info}>
-          <Text>{data.title}</Text>
-          <Text>{data.description}</Text>
-          <Text> Kr {data.price.toFixed(2)}</Text>
+          <Text style={styles.title}>{data.title}</Text>
+          <Text style={styles.description}>{data.description}</Text>
+          <Text style={styles.price}> Kr {data.price.toFixed(2)}</Text>
         </View>
       </Pressable>
     </Link>
@@ -30,6 +30,18 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     marginBottom: 16,
+    paddingRight: 16,
+    backgroundColor: "#fff",
+    borderBottomEndRadius: 18,
+    borderTopEndRadius: 18,
+    borderTopStartRadius: 24,
+    borderBottomStartRadius: 24,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
   },
   image: {
     width: 100,
@@ -40,5 +52,22 @@ const styles = StyleSheet.create({
   info: {
     flex: 1,
     marginLeft: 16,
+  },
+  title: {
+    paddingTop: 8,
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 8,
+  },
+  description: {
+    fontSize: 12,
+    color: "#555",
+    marginBottom: 8,
+  },
+  price: {
+    fontSize: 16,
+    fontWeight: "bold",
+    textAlign: "right",
+    color: "green",
   },
 });
