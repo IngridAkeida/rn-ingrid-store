@@ -6,7 +6,7 @@ export default function Home() {
       <Image source={require('../assets/sources/logo.png')} style={styles.logo} resizeMode="cover"/>
       <View>
         <Text style={styles.h1}> Ingrid's Store</Text>
-        <Text style={styles.h2}> IHere you can find everything you want!</Text>
+        <Text style={styles.h2}> Here you can find everything you want!</Text>
       </View>
     </SafeAreaView>
   );
