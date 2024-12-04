@@ -1,6 +1,6 @@
 import { data } from '../data';
 
-export const getProducts = () => {
+export const getAllProducts = () => {
   return data.products;
 }
 
