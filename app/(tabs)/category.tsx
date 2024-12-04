@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Home() {
+export default function Category() {
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Text>Category</Text>
     </View>
   );
 }
