@@ -1,6 +1,6 @@
 import { data } from '../data';
 
-export const getCategories = () => {
+export const getAllCategories = () => {
   return data.categories;
 }
 

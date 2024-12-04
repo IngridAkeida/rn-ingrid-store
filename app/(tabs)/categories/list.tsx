@@ -1,14 +1,13 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import { getAllPCategories } from '../../../services/category';
-import ProductItem from '../../components/product-item';
-
+import { getAllCategories } from '../../../services/category';
+import CategoryItem from "../../../components/category-item";
 export default function Home() {
-  const products = getAllProducts();
+  const categories = getAllCategories();
   return (
     <View style={styles.container}>
       <FlatList 
-        data={products}
-        renderItem={({ item }) => <ProductItem data={item} />}
+        data={categories}
+        renderItem={({ item }) => <CategoryItem data={item} />}
         keyExtractor={item => item.id.toString()}
         style={styles.list}
       />
