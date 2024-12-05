@@ -1,7 +1,6 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import { getAllCategories, getCategoryById } from '../../../services/category';
-import CategoryItem from '../../../components/category-item';
-import { router, useLocalSearchParams } from "expo-router";
+import { getCategoryById } from '../../../services/category';
+import { router, Stack, useLocalSearchParams } from "expo-router";
 import { getProductsByCategory } from "../../../services/products";
 import ProductItem from "../../../components/product-item";
 
@@ -16,6 +15,7 @@ export default function Screen() {
 
   return (
     <View style={styles.container}>
+      <Stack.Screen options={{ title: category.title}} />
       <FlatList 
         data={products}
         renderItem={({ item }) => <ProductItem data={item} />}
