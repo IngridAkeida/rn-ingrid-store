@@ -1,14 +1,22 @@
-import { Stack } from "expo-router";
+import { router, Stack, useLocalSearchParams } from "expo-router";
 import { ScrollView, StyleSheet } from "react-native";
 import { SafeAreaView, Text, View } from "react-native";
 import { Button } from "../../components/button";
+import { getProductsById } from "../../services/products";
 
 export default function Screen() {
+  const { id } = useLocalSearchParams();
+  const idProduct = parseInt(id as string);
+
+  const product = getProductsById(idProduct);
+
+  if (!product) return router.back();
+
   const handleBasket = () => {
-    
+    alert(`The product ${id} added to Basket`);
   }
   const handleBuy = () => {
-
+    alert(`You bought the item ${id}, enjoy!`);
   }
   return (
     <SafeAreaView style={styles.container}>
