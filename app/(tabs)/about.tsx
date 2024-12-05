@@ -2,30 +2,30 @@ import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Linking, ScrollView } from 'react-native';
 
 const AboutUs = () => {
-  const handleLinkPress = (url) => {
+  const handleLinkPress = (url: string) => {
     Linking.openURL(url);
   };
 
   return (
     <ScrollView style={styles.container}>
       <View style={styles.section}>
-        <Text style={styles.title}>Sobre a Loja</Text>
+        <Text style={styles.title}>About the Store</Text>
         <Text style={styles.text}>
-          Bem-vindo à nossa loja! Oferecemos produtos exclusivos feitos com cuidado e atenção aos detalhes. Nosso objetivo é trazer produtos que
-          iluminem seu dia e tornem sua vida mais especial.
+          Welcome to our store! We offer exclusive products made with care and attention to detail. Our goal is to bring products that brighten
+          your day and make your life more special.
         </Text>
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.title}>Sobre Mim</Text>
+        <Text style={styles.title}>About Me</Text>
         <Image
           source={{ uri: 'https://avatars.githubusercontent.com/u/86308973?v=4' }} 
           style={styles.image}
         />
         <Text style={styles.name}>Ingrid Sanches</Text>
         <Text style={styles.text}>
-          Sou desenvolvedora Frontend apaixonada por tecnologia, UI/UX e inovação. Atualmente, moro na Suécia e compartilho minha jornada como
-          imigrante e desenvolvedora.
+          I am a Frontend Developer passionate about technology, UI/UX, and innovation. Currently, I live in Sweden and share my journey as an
+          immigrant and developer.
         </Text>
         <View style={styles.linksContainer}>
           <TouchableOpacity
@@ -44,7 +44,7 @@ const AboutUs = () => {
             style={styles.linkButton}
             onPress={() => handleLinkPress('https://portfolio-ingridsanches.netlify.app/')}
           >
-            <Text style={styles.linkText}>Portfólio</Text>
+            <Text style={styles.linkText}>Portfolio</Text>
           </TouchableOpacity>
         </View>
       </View>
