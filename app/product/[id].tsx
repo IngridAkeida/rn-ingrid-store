@@ -13,16 +13,17 @@ export default function Screen() {
   if (!product) return router.back();
 
   const handleBasket = () => {
-    alert(`The product ${id} added to Basket`);
+    alert(`The product ${product.title} added to Basket`);
   }
   const handleBuy = () => {
-    alert(`You bought the item ${id}, enjoy!`);
+    alert(`You bought the item ${product.title}, enjoy!`);
   }
   return (
     <SafeAreaView style={styles.container}>
       <Stack.Screen options={{ title: '' }} />
       <ScrollView style={styles.area}>
         <View>
+          <Text>{product.title}</Text>
           <Text>Product</Text>
         </View>
       </ScrollView>
