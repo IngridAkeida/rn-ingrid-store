@@ -19,7 +19,7 @@ export default function CategoryItem({ data } : props) {
       />
       <View style={styles.bg}></View>
       <View style={styles.bgContent}>
-        <Text style={styles.bgContent}>{data.title}</Text>
+        <Text style={styles.title}>{data.title}</Text>
       </View>
     </Pressable>
   );
@@ -27,8 +27,6 @@ export default function CategoryItem({ data } : props) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    flexDirection: "row",
     marginBottom: 16,
     backgroundColor: "#fff",
     borderRadius: 18,
