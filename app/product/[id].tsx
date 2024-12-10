@@ -48,9 +48,8 @@ export default function Screen() {
         </View>
         <Text style={styles.priceDetails}> Original price 
           <Text style={styles.priceDetailsLined}> Kr {product.price.toFixed(2)}</Text>
-          <Button title="ℹ️" onPress={handleInfo}/>
-          <Pressable onPress={handleInfo} style={styles.buttonInfo} >
-            <Text style={styles.text}>ℹ️</Text>
+          <Pressable onPress={handleInfo}>
+            <Text style={styles.buttonInfo}> ℹ️</Text>
           </Pressable>
         </Text>
       </ScrollView>
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   rowArea: {
-    padding: 10,
+    paddingTop: 10,
     flexDirection: 'row',
     gap: 4,
     justifyContent: 'flex-end',
@@ -119,13 +118,18 @@ const styles = StyleSheet.create({
   },
   priceDetails: {
     fontSize: 14,
-    fontWeight: "bold",
+    fontWeight: "semibold",
     textAlign: "right",
     color: "grey",
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   priceDetailsLined: {
     textDecorationLine: "line-through",
     fontWeight: 'bold',
-    color: "#555",
+    color: "grey",
+  },
+  buttonInfo: {
+    fontSize: 12,
   },
 });
